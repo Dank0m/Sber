@@ -1,0 +1,41 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "result_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "rst_i",
+					"strict" : false
+				},
+				{
+					"name" : "opcode_i[2]",
+					"strict" : false
+				},
+				{
+					"name" : "second_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode_i[1]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "first_i[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_i",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

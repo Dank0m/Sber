@@ -1,0 +1,9 @@
+|overlay
+a_i => a_reg.DATAIN
+b_i => ~NO_FANOUT~
+clk_i => b_reg.CLK
+clk_i => a_reg.CLK
+a_o <= b_reg.DB_MAX_OUTPUT_PORT_TYPE
+b_o <= <GND>
+
+
