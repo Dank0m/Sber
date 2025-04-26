@@ -1,0 +1,54 @@
+\input{head}
+
+\title{Архитектура вычислительных систем. Домашнее задание №3. Вариант №1.}
+\author{Комиссаров Данил Андреевич}
+\date{March 2025}
+
+\begin{document}
+
+\section{Формальный отчет}
+\begin{enumerate}
+    \item Выполнил: Комиссаров Данил Андреевич.
+    \item Студент группы Б01-304.
+    \item Первый вариант задания.
+    \item Контакты: komissarov.da@phystech.edu
+    \item
+\end{enumerate}
+\begin{enumerate}
+    \item 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Formal/BHT1.png}
+\end{figure}
+Точность \textbf{bagic\_br\_1} составляет 99,99\%.\\
+Точность \textbf{bagic\_br\_2} составляет 100\%.
+    \item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Formal/BHT2.png}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Formal/task2.png}
+\end{figure}
+Индексы модулей предсказания для \textbf{beq} \textbf{branch1} и \textbf{branch2} совпали, а так как в настройках предиктора выставлен конечный автомат с двумя состояниями, то обманывать его можно, попеременно выдавая результаты \textit{taken} - \textit{not taken}. Так и добиваемся точности работы предиктора равной нулю.
+    \item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Formal/BHT3.png}
+\end{figure}
+В отличие от предиктора из первого задания, сейчас установлен предиктор с 4 состояниями, и причем он построен так, чтобы вместо \textbf{not taken} выдавать \textbf{taken}, необходимо ошибиться 2 раза, что и происходит в цикле \textit{loop}. Так этот предиктор ошибается на 1 раз больше в цикле.
+    \item 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Formal/BHT4.png}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Formal/task4.png}
+\end{figure}
+Действительно, так и сделаем: цикл \textbf{taken} - \textbf{taken} - \textbf{not taken} - \textbf{not taken}.
+В конце концов на ассемблере пишем, даже внутри ограниченного пространства можем перелопатить программу до неузнаваемости. Корректно процент предсказания уже не прописывается в программе, считаем отдельно в калькуляторе. Увеличивая начальное значение \textbf{t0}, уменьшается процент предсказания, но я не стал увеличивать, так как комп не тянет. 
+\end{enumerate}
+\end{document}
